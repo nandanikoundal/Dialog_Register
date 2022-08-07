@@ -11,6 +11,7 @@ import com.nandani.custom_dialog.databinding.CustomLayoutBinding
 
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var tv_name : TextView
     lateinit var tv_email : TextView
     lateinit var tv : TextView
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             dialog.setCancelable(false)
             dialog.setContentView(dialogBinding.root)
             dialog.show()
-            dialogBinding.Gender.setOnCheckedChangeListener { radioGroup, i ->
+            dialogBinding.rgGender.setOnCheckedChangeListener { radioGroup, i ->
                 when(i){
                     R.id.other->{
                         dialogBinding.etother.visibility=View.VISIBLE
